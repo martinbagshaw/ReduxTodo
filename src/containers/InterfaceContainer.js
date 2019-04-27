@@ -1,10 +1,15 @@
 // redux state wrapper for messages
 import { connect } from "react-redux"; // connect to the store
 
-import DisplayMessages from "./DisplayMessages";
-import addMessage from "./actions/actionCreators";
+// parent class component to connect to the store
+import Interface from "../components/Interface";
 
-// map state and dispatch to props
+// action creators
+import { addMessage } from "../actions/actionCreators";
+
+// map state and dispatch to props - for messages only
+// - may have to map more stuff to props as well
+// - may have to make more containers
 const mapStateToProps = state => {
   return { messages: state };
 };
@@ -17,9 +22,9 @@ const mapDispatchToProps = dispatch => {
 };
 
 // link to the store (connect redux to react)
-const MessageContainer = connect(
+const InterfaceContainer = connect(
   mapStateToProps,
   mapDispatchToProps
-)(DisplayMessages);
+)(Interface);
 
-export default MessageContainer;
+export default InterfaceContainer;

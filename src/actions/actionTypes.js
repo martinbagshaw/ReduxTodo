@@ -1,5 +1,5 @@
 // action type variables
 // - used for switch statements
-// const ADD = "ADD";
-
-// export default ADD;
+export const ADD = "ADD";
+export const CHECKED = "CHECKED";
+export const SET_MENU = "SET_MENU";

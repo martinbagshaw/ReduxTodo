@@ -1,12 +1,13 @@
+// App component in root to separate from regular app components
 import React from "react";
-import "./App.css";
+import "./css/App.css";
 
 // redux things
 import { Provider } from "react-redux"; // provider wraps the connect component
 import store from "./store/store"; // store stores our state
 
 // redux container
-import MessageContainer from "./MessageContainer";
+import InterfaceContainer from "./containers/InterfaceContainer";
 
 export default class App extends React.Component {
   render() {
@@ -16,7 +17,7 @@ export default class App extends React.Component {
           <h1>React Redux Todo List</h1>
         </header>
         <Provider store={store}>
-          <MessageContainer />
+          <InterfaceContainer />
         </Provider>
       </div>
     );

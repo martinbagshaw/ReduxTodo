@@ -58,11 +58,29 @@
   background: skyblue;
 }
 
+/* menu */
+.menu {
+  list-style: none;
+  padding: 0;
+  max-width: 30rem;
+  margin: 1rem auto 0;
+  display: flex;
+}
+.menu li {
+  padding: 0.5rem;
+  margin-left: 1rem;
+  border-bottom: 0.25rem solid transparent;
+}
+.menu li:first-child {
+  margin-left: 0;
+}
+.menu li.active {
+  border-bottom-color: black;
+}
+
+/* items */
 .todo-list {
   list-style: none;
-  border: 0.05rem solid black;
-  border-radius: 0.25rem;
-  box-shadow: 0.2rem 0.3rem 0.3rem rgba(0, 0, 0, 0.35);
   padding: 0;
   max-width: 30rem;
   margin: 1rem auto 0;
@@ -70,6 +88,21 @@
 .todo-list li {
   width: 100%;
   padding: 1rem;
+  margin-top: 0.5rem;
   box-sizing: border-box;
-  border-bottom: 0.1rem solid black;
+  border: 0.05rem solid black;
+  border-radius: 0.25rem;
+  box-shadow: 0.1rem 0.125rem 0.2rem rgba(0, 0, 0, 0.35);
+}
+
+.todo-list li:first-child {
+  margin-top: 0;
+}
+.todo-list li span {
+  background: skyblue;
+  color: black;
+  font-size: 0.9rem;
+  padding: 0.2rem;
+  margin-left: 0.25rem;
+  border-radius: 0.25rem;
 }
