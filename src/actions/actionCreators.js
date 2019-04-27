@@ -1,12 +1,12 @@
 // action creators
-// import ADD from "./actionTypes";
-const ADD = "ADD";
+import { ADD, CHECKED, SET_MENU } from "./actionTypes";
+// const ADD = "ADD";
 
-const addMessage = message => {
+export const addMessage = message => {
   return {
     type: ADD,
     message
   };
 };
 
-export default addMessage;
+// export default addMessage;
