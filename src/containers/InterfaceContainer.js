@@ -1,11 +1,12 @@
-// redux state wrapper for messages
+// redux container
+// - connects components in Interface.js to the store
 import { connect } from "react-redux"; // connect to the store
 
 // parent class component to connect to the store
 import Interface from "../components/Interface";
 
 // action creators
-import { addMessage } from "../actions/actionCreators";
+import { addTodo, checkTodo } from "../actions/actionCreators";
 
 // map state and dispatch to props - for messages only
 // - may have to map more stuff to props as well
@@ -13,10 +14,15 @@ import { addMessage } from "../actions/actionCreators";
 const mapStateToProps = state => {
   return { messages: state };
 };
+
+// map different actions we are dispatching to props
 const mapDispatchToProps = dispatch => {
   return {
-    submitNewMessage: function(message) {
-      dispatch(addMessage(message));
+    submitTodo: function(message) {
+      dispatch(addTodo(message));
+    },
+    toggleTodo: function(message) {
+      dispatch(checkTodo(message));
     }
   };
 };

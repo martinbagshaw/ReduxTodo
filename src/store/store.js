@@ -1,6 +1,8 @@
 import { createStore } from "redux";
-import messageReducer from "../reducers/messageReducer";
 
-const store = createStore(messageReducer);
+// will want to combine todo reducer with menu reducer
+import todoReducer from "../reducers/todoReducer";
+
+const store = createStore(todoReducer);
 
 export default store;
