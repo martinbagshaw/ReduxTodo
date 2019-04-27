@@ -3,11 +3,12 @@
 import React from "react";
 
 import { TodoAdd } from "./TodoAdd";
-import { TodoMenu } from "./TodoMenu";
+// import { TodoMenu } from "./TodoMenu";
 import { TodoList } from "./TodoList";
 
-// messages come from props - parent component connects with the redux store
-// - attempt to have one connection with the store, and props passed down to all children
+// messages come from props
+// - parent component connects with the redux store
+// - one connection with the store, with props passed down to all children
 export default class Interface extends React.Component {
   constructor(props) {
     super(props);
@@ -24,7 +25,7 @@ export default class Interface extends React.Component {
   }
 
   submitMessage() {
-    this.props.submitNewMessage(this.state.input);
+    this.props.submitTodo(this.state.input);
     this.setState({
       input: ""
     });
@@ -40,11 +41,9 @@ export default class Interface extends React.Component {
     return (
       <div className="Messages">
         <h2>Type in a new Message:</h2>
-        <p>Add views for all, done, todo</p>
-        <p>also add a way to add tags for each</p>
         <TodoAdd onChange={this.handleChange} onClick={this.submitMessage} input={input} />
-        <TodoMenu />
-        <TodoList messages={messages} />
+        {/* <TodoMenu /> */}
+        <TodoList messages={messages} onClick={this.props.toggleTodo} />
       </div>
     );
   }
