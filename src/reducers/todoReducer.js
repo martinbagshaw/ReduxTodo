@@ -1,19 +1,6 @@
 // action creators
 import { ADD, CHECKED } from "../actions/actionTypes";
 
-// old message reducer and state
-// const initialState = [];
-// const messageReducer = (state = initialState, action) => {
-//   switch (action.type) {
-//     case ADD:
-//       return [...state, action.message];
-//     default:
-//       return state;
-//   }
-// };
-
-// export default messageReducer;
-
 // set the initial state for todo items
 const initialState = {
   allIds: [],

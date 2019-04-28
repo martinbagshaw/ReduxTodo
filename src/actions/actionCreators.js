@@ -16,3 +16,5 @@ export const checkTodo = id => ({
   type: CHECKED,
   payload: { id }
 });
+
+export const setMenu = filter => ({ type: SET_MENU, payload: { filter } });

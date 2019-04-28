@@ -24,6 +24,21 @@
   justify-content: center;
 }
 
+/* form */
+.form {
+  max-width: 25rem;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.form .text-input {
+  flex: 1;
+}
+.error-msg {
+  color: red;
+}
+
 .text-input,
 .button {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
@@ -43,7 +58,7 @@
 }
 
 .text-input {
-  margin-right: 0.5rem;
+  margin-right: 1rem;
   border: 0.1rem solid black;
 }
 .text-input:focus {
@@ -62,17 +77,23 @@
 .menu {
   list-style: none;
   padding: 0;
-  max-width: 30rem;
+  max-width: 25rem;
   margin: 1rem auto 0;
   display: flex;
+  justify-content: space-between;
+  font-size: 1.25rem;
 }
 .menu li {
   padding: 0.5rem;
-  margin-left: 1rem;
-  border-bottom: 0.25rem solid transparent;
+  margin-left: 1.5rem;
+  border-bottom: 0.2rem solid transparent;
+  cursor: pointer;
 }
 .menu li:first-child {
   margin-left: 0;
+}
+.menu li:hover {
+  border-bottom-color: grey;
 }
 .menu li.active {
   border-bottom-color: black;

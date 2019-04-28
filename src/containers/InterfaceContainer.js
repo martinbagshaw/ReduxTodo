@@ -6,23 +6,30 @@ import { connect } from "react-redux"; // connect to the store
 import Interface from "../components/Interface";
 
 // action creators
-import { addTodo, checkTodo } from "../actions/actionCreators";
+import { addTodo, checkTodo, setMenu } from "../actions/actionCreators";
 
-// map state and dispatch to props - for messages only
-// - may have to map more stuff to props as well
-// - may have to make more containers
+// map state to props - for messages only
+// - key = reducer function name
 const mapStateToProps = state => {
-  return { messages: state };
+  return {
+    messages: state.todoReducer,
+    activeItem: state.menuReducer
+  };
 };
 
 // map different actions we are dispatching to props
 const mapDispatchToProps = dispatch => {
   return {
+    // todos
     submitTodo: function(message) {
       dispatch(addTodo(message));
     },
     toggleTodo: function(message) {
       dispatch(checkTodo(message));
+    },
+    // menu
+    menuState: function(menuItem) {
+      dispatch(setMenu(menuItem));
     }
   };
 };
