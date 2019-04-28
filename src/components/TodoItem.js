@@ -1,14 +1,6 @@
 import React from "react";
 
 const TodoItem = ({ item, onClick }) => {
-  // idea to have tags as an extra feature
-  // const tags = item => {
-  //   return item.split("").map(i => <span>{i}</span>);
-  // };
-  //{
-  /* {tags(item)} */
-  //}
-
   return (
     <li onClick={() => onClick(item.id)} className={item.completed ? "checked" : ""}>
       {item.message}
