@@ -14,7 +14,7 @@
 ### Architecture
 > a diagram to help you and me understand the whole redux thing...
 
-![redux data flow diagram](redux-dataflow.png "Basic data flow diagram")
+![redux data flow diagram](redux-dataflow.jpg "Basic data flow diagram")
 
 ### Things I learnt
 - I can cut down on the amount of code I need to write with:
